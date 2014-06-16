@@ -3,10 +3,11 @@ namespace Toddish\Verify\Models;
 
 use Illuminate\Auth\UserInterface;
 use Illuminate\Auth\Reminders\RemindableInterface;
+use Illuminate\Database\Eloquent\SoftDeletingTrait;
 
 class User extends BaseModel implements UserInterface, RemindableInterface
 {
-    use \SoftDeletingTrait;
+    use SoftDeletingTrait;
 
     /**
      * The table associated with the model.
